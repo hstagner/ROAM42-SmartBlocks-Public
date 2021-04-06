@@ -1,0 +1,19 @@
+- #42SmartBlock New Article Idea
+    - <%SET:ArticleTitle,Article: <%INPUT:What is the Article Title?%>%><%NOBLOCKOUTPUT%>
+    - <%SIDEBARWINDOWOPEN: <%GET:ArticleTitle%>%><%GOTOBLOCK:-1%><%NOBLOCKOUTPUT%>
+    - 
+    - Type:: #[[Article Idea]], #Seed
+    - Summary:: 
+    - Published URL::
+    - **Related Notes and Sources:**
+        - 
+    - **Body / Outline:**
+        - **Introduction / Problem**
+            - <%CURSOR%>
+        - **Proposed Solution**
+            - 
+        - **Solution Implementation**
+            - 
+    - **Draft** {{word-count}}
+        - 
+    - <%CLEARVARS%><%NOBLOCKOUTPUT%>
