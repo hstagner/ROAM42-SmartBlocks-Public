@@ -1,0 +1,25 @@
+- #42SmartBlock Create Project <%GLOBAL%>
+    - <%SET:ProjectName,<%INPUT:What is the Project Name?%>%><%NOBLOCKOUTPUT%>
+    - <%SET:ProjectGoal,<%GET:ProjectGoal%>%><%NOBLOCKOUTPUT%>
+    - <%SIDEBARWINDOWOPEN: <%GET:ProjectName%>%><%GOTOBLOCK:-1%><%NOBLOCKOUTPUT%>
+    - 
+    - Keywords: #Projects | Due Date: #TBD | Goals: <%INPUT:Input project goal here.%>
+        - [[Project Todos]] \
+            - {{[[query]]: {and: [[TODO]] [[<%GET:ProjectName%>]]}}}
+    - ---
+    - Deliverables / Files / Links:
+        -  
+    - ---
+    - Meetings:
+        - {{[[query]]: {and: [[Meetings]] [[<%GET:ProjectName%>]]}}}
+    - <%SIDEBARWINDOWOPEN: ROAM42-workBench%><%GOTOBLOCK:-1%><%NOBLOCKOUTPUT%>
+    - ^^<%GET:ProjectName%>^^
+        - #42work<%CONCAT:Bench%> Inbox
+            - Name: <%GET:ProjectName%>
+            - Page: <%GET:ProjectName%>
+            - Text: Deliverables / Files / Links:
+            - Location: top
+            - Blockref: true
+        - ---
+    - <%SIDEBARWINDOWCLOSE:1%><%NOBLOCKOUTPUT%>
+    - <%CLEARVARS%><%NOBLOCKOUTPUT%>
